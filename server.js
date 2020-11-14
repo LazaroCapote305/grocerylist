@@ -12,18 +12,59 @@ app.listen(PORT, () =>{
 })
 
 
-console.log(removedDrink);
+// console.log(removedDrink);
+// console.log(drinks);
+// const drinks = ["coke zero", "pepsi", "coffee", "water"];
+// const id = drinks.indexOf("pepsi"); 
+// const removedDrink = drinks.splice(id,  1);
+// // removing item
+
+let drinks = [
+    { id: 1, name: "coke zero", price: 1.00},
+    { id: 2, name: "zero", price: 1.00},
+    { id: 3, name: "cherry coke", price: 1.00},
+    { id: 4, name: "", price: 1.00},
+]
+
+
+// To get all drinnks
+app.get("/drinks", (req, res) => {
+    res.status(200).json(drinks);
+})
+
+/**
+ *  app.delete("/drinks/:id", (req, res) => {
+ *      let drinks = [
+    { id: 1, name: "coke zero", price: 1.00},
+    { id: 2, name: "zero", price: 1.00},
+    { id: 3, name: "cherry coke", price: 1.00},
+    { id: 4, name: "dr pepper", price: 1.00},
+]
+
+drinks[1].price
+
 console.log(drinks);
-const drinks = ["coke zero", "pepsi", "coffee", "water"];
-const id = drinks.indexOf("pepsi"); 
-const removedDrink = drinks.splice(id,  1);
-// removing item
+let id = 2
+for (let i = 0; i < drinks.length; i++) {
+    if (drinks[i].id == id){
+        drinks.splice(i, 1);
+    }
 
-var drinks = ["coke zero", "pepsi", "coffee", "water"]
-drinks.push("water");
-//adding item
+}
+
+console.log("\n\n*******************")
+console.log(drinks);
+ * })
+ * 
+ * 
+ */
 
 
 
 
+
+
+
+// drinks.push("water");
+// //adding item
 
