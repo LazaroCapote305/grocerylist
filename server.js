@@ -25,6 +25,12 @@ let drinks = [
     { id: 3, name: "cherry coke", price: 1.00},
     { id: 4, name: "", price: 1.00},
 ]
+let drinks = [
+    
+]
+drinks.splice(1,2)
+console.log(drinks)
+drinks.splice(id; 0,2)
 
 
 // To get all drinnks
