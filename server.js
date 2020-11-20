@@ -57,7 +57,14 @@ app.post("/drinks", (req, res) => {
 });
 
 app.put("/drinks/:id", (req, res) => {
-    res.send("drinks")
+    const {id} = req.body;
+    db("drinks").where("id","=",id)
+    .increment("drinks",1.00)
+    .returning("drinks")
+    .then(drinks => {
+        res.json(drinks[1.00]);
+    })
+    .catch(err => res.status(200).json("Price Change"))
 })
 app.listen(3000,drinks(err){
     if (err) console.log(err);
