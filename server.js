@@ -57,5 +57,9 @@ app.post("/drinks", (req, res) => {
 });
 
 app.put("/drinks/:id", (req, res) => {
-    
+    res.send("drinks")
 })
+app.listen(3000,drinks(err){
+    if (err) console.log(err);
+    console.log("Server listening on PORT", 3000),
+}
